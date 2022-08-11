@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="value">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="naver-site-verification" content="3c3d0d8138c15d70fa517e655091ccc6818fdd9f" />
+        <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>MBTI 테스트</title>
+
+        <link rel="alternate" hreflang="ko" href="https://mbtionface.netlify.app/ko/index.html" />
+        <link rel="alternate" hreflang="en" href="https://mbtionface.netlify.app/en/index.html" />
+        <link rel="alternate" hreflang="es" href="https://mbtionface.netlify.app/es/index.html" />
+        <link rel="alternate" hreflang="ja" href="https://mbtionface.netlify.app/ja/index.html" />
+        <link rel="alternate" hreflang="zh" href="https://mbtionface.netlify.app/zh/index.html" />
+        <link rel="alternate" hreflang="vi" href="https://mbtionface.netlify.app/vi/index.html" />
+        <link rel="alternate" hreflang="id" href="https://mbtionface.netlify.app/id/index.html" />
+        <link rel="alternate" hreflang="it" href="https://mbtionface.netlify.app/it/index.html" />
+        <link rel="alternate" hreflang="th" href="https://mbtionface.netlify.app/th/index.html" />
+        <link rel="alternate" hreflang="x-default" href="https://mbtionface.netlify.app/" />
+        
+        <meta name="title" content="MBTI 테스트" />
+        <meta
+            name="subject"
+            content="얼굴로 확인하는 인공지능 MBTI 테스트, 간편하게 나의 MBTI를 찾아보세요!"
+        />
+        <meta
+            name="keywords"
+            content="MBTI 테스트, 인공지능 MBTI 테스트, 얼굴상, 얼굴상 테스트, 나의 MBTI, MBTI 찾기, 얼굴로 보는 MBTI, 얼굴 MBTI, 동물MBTI, MBTIface, ISTJ, ISTP, ESTP, ESTJ, ISFJ, ISFP, ESFP, ESFJ, INFJ, INFP, ENFP, ENFJ, INTJ, INTP, ENTP, ENTJ, 연예인MBTI, 연예인 MBTI, MBTI 연예인"
+        />
+        <meta name="author" content="charles" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="canonical" href="https://mbtionface.netlify.app" />
+        <meta property="og:url" content="https://mbtionface.netlify.appe" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="MBTI 테스트" />
+        <meta
+            property="og:description"
+            content="얼굴로 확인하는 인공지능 MBTI 테스트, 간편하게 나의 MBTI를 찾아보세요! 1,000명의 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴특징으로 MBTI성향을 분석해드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 MBTI 테스트 한번 해보세요! ISTJ? ISTP? ESTP? ESTJ? ISFJ? ISFP? ESFP? ESFJ? INFJ? INFP? ENFP? ENFJ? INTJ? INTP? ENTP? ENTJ? 간편한 사진등록을 위해 나의 MBTI 성향을 찾을 수 있습니다."
+        />
+        <meta
+            property="og:image"
+            content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fc0eq42%2FbtqCQpiFhFn%2F8KPaOP9q8PXpJFRL7if55K%2Fimg.jpg"
+        />
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6253e51a4750b6fa"
+        ></script>
+    </head>
+
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+        #label-container div:nth-child(6) {
+            display: none !important;
+        }
+        #label-container div:nth-child(7) {
+            display: none !important;
+        }
+        #label-container div:nth-child(8) {
+            display: none !important;
+        }
+        #label-container div:nth-child(9) {
+            display: none !important;
+        }
+        #label-container div:nth-child(10) {
+            display: none !important;
+        }
+        #label-container div:nth-child(11) {
+            display: none !important;
+        }
+        #label-container div:nth-child(12) {
+            display: none !important;
+        }
+        #label-container div:nth-child(13) {
+            display: none !important;
+        }
+        #label-container div:nth-child(14) {
+            display: none !important;
+        }
+        #label-container div:nth-child(15) {
+            display: none !important;
+        }
+        #label-container div:nth-child(16) {
+            display: none !important;
+        }
+    </style>
+
+    <body>
+        <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="https://animalface.site/">MBTI 테스트</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"
+                            >MBTI 테스트
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a
+                            class="nav-link"
+                            id="yotube-top-link"
+                            href="https://smartstore.naver.com/kkamshow"
+                            >쇼핑은 깜쇼</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="container d-flex flex-column justify-content-center align-items-center">
+            <span class="select-language">Language</span>
+            <select onchange="changeLanguage(this)" class="custom-select col-8">
+                <option value="ko" lang="ko">한국어</option>
+                <option value="en" lang="en">English</option>
+                <option value="es" lang="es">español</option>
+                <option value="ja" lang="ja">日本語</option>
+                <option value="zh" lang="zh">中文</option>
+                <option value="vi" lang="vi">tiếng Việt</option>
+                <option value="id" lang="id">Bahasa Indonesia</option>
+                <option value="it" lang="it">Italiano</option>
+                <option value="th" lang="th">ไทย</option>
+            </select>
+        </section>
+
+        <script>
+            var ua = navigator.userAgent.toLowerCase();
+            function changeLanguage(lang) {
+                if (
+                    (navigator.userAgent.indexOf('Mac OS') > 0 &&
+                        navigator.userAgent.indexOf('Safari') <= 0) ||
+                    (navigator.userAgent.indexOf('Android') > 0 &&
+                        navigator.userAgent.indexOf('wv)') > 0)
+                ) {
+                    if (ua.match('android') != null) {
+                        window.open(
+                            'googlechrome://navigate?url=mbtionface.netlify.app/' +
+                                lang.value +
+                                '/index.html'
+                        ); //android
+                    } else if (
+                        ua.indexOf('iphone') > -1 ||
+                        ua.indexOf('ipad') > -1 ||
+                        ua.indexOf('ipod') > -1
+                    ) {
+                        window.location.href =
+                            'https://mbtionface.netlify.app/' + lang.value + '/index.html';
+                    } else {
+                        window.location.href =
+                            'https://mbtionface.netlify.app/' + lang.value + '/index.html';
+                    }
+                } else {
+                    window.location.href =
+                        'https://mbtionface.netlify.app/' + lang.value + '/index.html';
+                }
+            }
+        </script>
+
+        <section class="section">
+            <h1 class="title">MBTI 테스트</h1>
+            <h2 class="subtitle">얼굴로 확인하는 인공지능 MBTI 테스트</h2>
+            <h2 class="sr-only">
+                나의 MBTI 성향은 무엇일까? 얼굴로 간편하게 나의 MBTI를 찾아보세요!
+            </h2>
+            <h3 class="sr-only">
+                1,000명의 연예인 사진 데이터로 학습한 인공지능이 얼굴 사진으로 당신의 MBTI 성향을
+                찾아드립니다.
+            </h3>
+            <h4 class="sr-only">
+                본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.
+            </h4>
+            <p class="sr-only">
+                얼굴로 확인하는 인공지능 MBTI 테스트, 간편하게 나의 MBTI를 찾아보세요! 1,000명의
+                연예인 사진 데이터로 학습한 인공지능이 나의 얼굴특징으로 MBTI성향을 분석해드립니다.
+                회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지
+                않습니다. 인공지능이 분석하는 나의 MBTI 테스트 한번 해보세요! 간편한 사진등록을 위해
+                나의 MBTI 성향을 찾을 수 있습니다.
+            </p>
+        </section>
+        <section class="youtube pb-3" id="yotube-mid-link">
+            <!-- <div class="container mt-3 youtube-cover d-flex flex-row-reverse align-items-center">
+            <img src="img/youtube-copy.jpg" alt="youtube-icon" class="youtube-icon">
+            <a href="https://----" class="youtube-link">By 처리의 채널</a>
+        </div> -->
+        </section>
+        <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+        <section class="d-flex justify-content-center">
+            <p class="d-flex align-items-center pr-3">여자</p>
+            <div>
+                <input type="checkbox" id="gender" />
+                <label for="gender">
+                    <span class="knob">
+                        <i></i>
+                    </span>
+                </label>
+            </div>
+            <p class="d-flex align-items-center pl-3">남자</p>
+        </section>
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <div class="mt-3 container file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <img src="img/upload.svg" class="mt-5 pt-5 upload" />
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        얼굴 사진을 올려놓거나 눌러서 업로드하세요!
+                    </h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <div id="loading" class="animated bounce">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-center">AI가 당신의 MBTI 성향을 분석중입니다.</p>
+                </div>
+                <p class="result-message"></p>
+                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_t1y6"></div>
+
+                <div class="pt-3 image-title-wrap">
+                    <button
+                        type="button p-2"
+                        class="try-again-btn"
+                        onclick="window.location.reload();"
+                    >
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer pt-5 container d-flex justify-content-center">
+            <div>
+                <p>&copy; FRIENDWORKS 2022. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+            (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://mbti-face.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+        >
+
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('#loading').show();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+                        $('.image-title').html(input.files[0].name);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(function () {
+                        console.log('hello');
+                        predict();
+                        $('#loading').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            let URL;
+            const urlMale = 'https://teachablemachine.withgoogle.com/models/Jysm44wZs/';
+            const urlFemale = 'https://teachablemachine.withgoogle.com/models/SM7xPomcu/';
+            let model, webcam, labelContainer, maxPredictions;
+            async function init() {
+                if (document.getElementById('gender').checked) {
+                    URL = urlMale;
+                } else {
+                    URL = urlFemale;
+                }
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < maxPredictions; i++) {
+                    var element = document.createElement('div');
+                    element.classList.add('d-flex');
+                    labelContainer.appendChild(element);
+                }
+            }
+            async function predict() {
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultTitle, resultExplain, resultCeleb;
+                if (document.getElementById('gender').checked) {
+                    switch (prediction[0].className) {
+                        case 'ISTJ':
+                            resultTitle = 'ISTJ : 청렴결백한 논리주의자';
+                            resultExplain =
+                                '♠기본성향 : 사실에 근거하여 사고하며 행동이나 결정 사항에 한치의 의심을 사지 않는 현실 주의자형 <br> ♥연애 성향 : 자신의 감정을 절대 표현하지 않음. <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ISTJ 연예인: 차태현, 이장원, 정찬우(iKON), 엘(인피니트), 마크(GOT7)';
+                            break;
+                        case 'ISTP':
+                            resultTitle = 'ISTP : 백과사전형 만능 재주꾼';
+                            resultExplain =
+                                '♠기본성향 : 대담하고 현실적인 성향으로 다양한 도구 사용에 능숙한 탐험형 <br> ♥연애 성향 : 집에서 넷플릭스 보느라 연애를 안함 <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격';
+                            resultCeleb =
+                                'ISTP 연예인: 장성규, 박명수, 배성재(아나운서), 버논(세븐틴), 하석진';
+                            break;
+                        case 'ESTP':
+                            resultTitle = 'ESTP : 모험을 즐기는 사업가';
+                            resultExplain =
+                                '♠기본성향 : 벼랑 끝의 아슬아슬한 삶을 진정으로 즐길 줄 아는 이들로 명석한 두뇌와 에너지, 그리고 뛰어난 직관력을 가지고 있는 유형 <br> ♥연애 성향 : 금방 사랑에 빠지고 금방 사랑이 식음(바람기 다수 보유) <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ESTP 연예인: 성찬(NCT), 장범준, 전현무, 허훈(농구), 신동엽';
+                            break;
+                        case 'ESTJ':
+                            resultTitle = 'ESTJ : 엄격한 사업가형 관리자';
+                            resultExplain =
+                                '♠기본성향 : 사물이나 사람을 관리하는데 타의 추총을 불허하는 뛰어난 실력을 갖춘 관리자형 <br> ♥연애 성향 : 첫 데이트에서 사랑해 라고 말하는 애인이 부담스러움(상대가 화장실 간 사이에 문자 다 읽음) <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ESTJ 연예인: 지민(BTS), 김구라, 김준수(JYJ), 류준열, 여원(펜타곤), 장동민';
+                            break;
+                        case 'ISFJ':
+                            resultTitle = 'ISFJ : 용감한 수호자';
+                            resultExplain =
+                                '♠기본성향 : 소중한 이들을 수호하는데 심혈을 기울이는 헌신적이며 성실한 방어자형 <br> ♥연애 성향 : 감정 표현엔 서툴러서 자꾸 돈으로 사랑을 표현함 (사귄지 1주일 됐는데 백만원짜리 선물 줌) <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ISFJ 연예인: 최강창민, 진영(GOT7), 대성(BIGBANG), 시우민, 장민호, 김경호';
+                            break;
+                        case 'ISFP':
+                            resultTitle = 'ISFP : 호기심 많은 예술가';
+                            resultExplain =
+                                '♠기본성향 : 항시 새로운 것을 찾아 시도하거나 도전할 준비가 되어 있는 융통성 있는 성격의 매력 넘치는 예술가형 <br> ♥연애 성향 : 질투 대마왕인데 애인이 싫어할까봐 절대 티 안냄 <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ISFP 연예인: 유재석, 양세찬, 유승호, 백현(EXO), 김동욱, 쇼타로(NCT)';
+                            break;
+                        case 'ESFP':
+                            resultTitle = 'ESFP : 자유로운 영혼의 연예인';
+                            resultExplain =
+                                '♠기본성향 : 주위에 있으면 인생이 지루할 새가 없을 정도로 즉흥적이며 열정과 에너지가 넘치는 연예인형 <br> ♥연애 성향 : 애인이 날 사랑하는지 모르겠음, 조금만 다투면 넌 나 안 사랑하자나 라고 외침 <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ESFP 연예인: 비, 이재욱, 우영(2PM), 재현(NCT), 한결(BAE173), 정준하';
+                            break;
+                        case 'ESFJ':
+                            resultTitle = 'ESFJ : 사교적인 외교관';
+                            resultExplain =
+                                '♠기본성향 : 타인을 향항 세심한 관심과 사교적인 성향으로 사람들 내에서 인기가 많으며, 타인을 돕는데 열정적인 세심형 <br> ♥연애 성향 : 기념일에 무심하고 안챙기는 애인에게 기념일 왜 모르냐고 싸우기 시작 <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ESFJ 연예인: 박보검, 이수근, 규현, 피오, 김준서(위아이), 쿤(NCT)';
+                            break;
+                        case 'INFJ':
+                            resultTitle = 'INFJ : 선의의 옹호자';
+                            resultExplain =
+                                '♠기본성향 : 조용하고 신비로우며 샘솟는 영감으로 지칠 줄 모르는 이상주의자 <br> ♥연애 성향 : 애인 SNS를 살피다가 스크롤 끝까지 하면서 밤샘 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'INFJ 연예인: 제이홉(BTS), 조인성, 양세형, 정일우, 강태오, 강승윤, 준호(2PM)';
+                            break;
+                        case 'INFP':
+                            resultTitle = 'INFP : 열정적인 중재자';
+                            resultExplain =
+                                '♠기본성향 : 상냥한 성격의 이타주의자로 건강하고 밝은 사회 건설에 앞장서는 낭만형 <br> ♥연애 성향 : 첫데이트에서 사랑해~ 라고 말함 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'INFP 연예인: 뷔(BTS), 최우식, 송민호, 강하늘, 조승우, 김종민, 윤종신, 강호동';
+                            break;
+                        case 'ENFP':
+                            resultTitle = 'ENFP : 재기발랄한 활동가';
+                            resultExplain =
+                                '♠기본성향 : 창의적이며 항상 웃을 거리를 찾아 다니는 활방한 성격으로 사람들과 자유롭게 어울리기를 좋아하는 넘치는 열정의 소유자 <br> ♥연애 성향 : 연애 시작 했는데 갑자기 연애보다 꿀잼인 일들이 생김 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'ENFP 연예인: RM(BTS), 손석구, 케이윌, 김준호, 딘딘, 싸이, 조세호, 루카스(NCT)';
+                            break;
+                        case 'ENFJ':
+                            resultTitle = 'ENFJ : 정의로운 사회 운동가';
+                            resultExplain =
+                                '♠기본성향 : 넘치는 카르스마와 영향력으로 창중을 압도하는 리더형 <br> ♥연애 성향 : 애인의 전 연인들을 궁금해하고, 완벽한 이상형이 되고 싶어함, 새벽 2시인데 남친/여친의 옛애인 SNS 몰래봄 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'ENFJ 연예인: 강다니엘, 디노(세븐틴), 이정재, 임시완, 정우성, 키노(펜타곤)';
+                            break;
+                        case 'INTJ':
+                            resultTitle = 'INTJ : 용의주도한 전략가';
+                            resultExplain =
+                                '♠기본성향 : 상상력이 풍부하며 철두철미한 계획을 세우는 전략가형 <br> ♥연애 성향 : 첫 데이트 하는 날, 결혼하는 상상부터 자녀 계획까지 세움 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'INTJ 연예인: 은혁(슈퍼주니어), 유준상, 이경규, 빽가(코요테), 엄기준, 허영생';
+                            break;
+                        case 'INTP':
+                            resultTitle = 'INTP : 논리적인 사색가';
+                            resultExplain =
+                                '♠기본성향 : 끊임없이 새로운 지식에 목말라 하는 혁신가형 <br> ♥연애 성향 : 좋아하는 마음을 카톡을 통해서만 티낼 수 있음 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'INTP 연예인: 정국(BTS), 진(BTS), 김우빈, 안효섭, 김우석(업텐션), 정형돈';
+                            break;
+                        case 'ENTP':
+                            resultTitle = 'ENTP : 뜨거운 논쟁을 즐기는 변론가';
+                            resultExplain =
+                                '♠기본성향 : 지적인 도전을 두려워하지 않는 똑똑한 호기심형 <br> ♥연애 성향 : 사실 내가 1순위라 애인보다 내 자신을 더 좋아함 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'ENTP 연예인: 영탁, 박경, 하하, 이제훈, 김수찬, 김동완(신화), 자이언티';
+                            break;
+                        case 'ENTJ':
+                            resultTitle = 'ENTJ : 대담한 통솔자';
+                            resultExplain =
+                                '♠기본성향 : 천성적으로 타고난 리더 대담하면서도 상상력이 풍부한 강한 의지의 소유자료 다양한 방법을 모색하거나 여의치 않을 경우 새로운 방안을 창출하는 리더형 <br> ♥연애 성향 : 애인 핸드폰에 뜨는 알람 하나하나를 궁금해함 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'ENTJ 연예인: 곽동연, 붐, 비토(업텐션), 여진구, 지코, 이승기, 홍석';
+                            break;
+                        default:
+                            resultTitle = '알수없음';
+                            resultExplain = '';
+                            resultCeleb = '';
+                    }
+                } else {
+                    switch (prediction[0].className) {
+                        case 'ISTJ':
+                            resultTitle = 'ISTJ : 청렴결백한 논리주의자';
+                            resultExplain =
+                                '♠기본성향 : 사실에 근거하여 사고하며 이들의 행동이나 결정 사항에 한치의 의심을 사지 않는 현실 주의자형 <br> ♥연애 성향 : 자신의 감정을 절대 표현하지 않음 <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ISTJ 연예인: 써니(소녀시대), 가을(IVE), 보나, 이보영, 이서연, 이세영';
+                            break;
+                        case 'ISTP':
+                            resultTitle = 'ISTP : 백과사전형 만능 재주꾼';
+                            resultExplain =
+                                '♠기본성향 : 대담하고 현실적인 성향으로 다양한 도구 사용에 능숙한 탐험형 <br> ♥연애 성향 : 집에서 넷플릭스 보느라 연애를 안함 <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ISTP 연예인: 나연(TWICE), 윤여정, 유빈(원더걸스), 홍진경, 권진아';
+                            break;
+                        case 'ESTP':
+                            resultTitle = 'ESTP : 모험을 즐기는 사업가';
+                            resultExplain =
+                                '♠기본성향 : 벼랑 끝의 아슬아슬한 삶을 진정으로 즐길 줄 아는 이들로 명석한 두뇌와 에너지, 그리고 뛰어난 직관력을 가지고 있는 유형 <br> ♥연애 성향 : 금방 사랑에 빠지고 금방 사랑이 식음(바람기 다수 보유) <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ESTP 연예인: 지수(BLACKPINK), 이유비, 경리, 김완선, 큐리, 해원';
+                            break;
+                        case 'ESTJ':
+                            resultTitle = 'ESTJ : 엄격한 사업가형 관리자';
+                            resultExplain =
+                                '♠기본성향 : 사물이나 사람을 관리하는데 타의 추총을 불허하는 뛰어난 실력을 갖춘 관리자형 <br> ♥연애 성향 : 첫 데이트에서 사랑해 라고 말하는 애인이 부담스러움(상대가 화장실 간 사이에 문자 다 읽음) <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ESTJ 연예인: 송은이, 치타, 한가인, 한채영, 남지현, 소희(앨리스)';
+                            break;
+                        case 'ISFJ':
+                            resultTitle = 'ISFJ : 용감한 수호자';
+                            resultExplain =
+                                '♠기본성향 : 소중한 이들을 수호하는데 심혈을 기울이는 헌신적이며 성실한 방어자형 <br> ♥연애 성향 : 감정 표현엔 서툴러서 자꾸 돈으로 사랑을 표현함 (사귄지 1주일 됐는데 백만원짜리 선물 줌) <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ISFJ 연예인: 다현(TWICE), 정연(TWICE), 나르샤, 루다(우주소녀), 안영미';
+                            break;
+                        case 'ISFP':
+                            resultTitle = 'ISFP : 호기심 많은 예술가';
+                            resultExplain =
+                                '♠기본성향 : 항시 새로운 것을 찾아 시도하거나 도전할 준비가 되어 있는 융통성 있는 성격의 매력 넘치는 예술가형 <br> ♥연애 성향 : 질투 대마왕인데 애인이 싫어할까봐 절대 티 안냄 <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ISFP 연예인: 미나/지효/쯔위(TWICE), 설현, 간미연, 이해리(다비치), 진세연';
+                            break;
+                        case 'ESFP':
+                            resultTitle = 'ESFP : 자유로운 영혼의 연예인';
+                            resultExplain =
+                                '♠기본성향 : 주위에 있으면 인생이 지루할 새가 없을 정도로 즉흥적이며 열정과 에너지가 넘치는 연예인형 <br> ♥연애 성향 : 애인이 날 사랑하는지 모르겠음, 조금만 다투면 넌 나 안 사랑하자나 라고 외침 <br> ♣투자성향 : 소비를 즐기고 순간의 즐거움을 쫓는 예술가, 자유분방하여 앞날을 걱정하지 않는 성격으로 주위 요망';
+                            resultCeleb =
+                                'ESFP 연예인: 강혜원(아이즈원), 이선빈, 신봉선, 주이(모모랜드), 에일리, 윤아, 효린';
+                            break;
+                        case 'ESFJ':
+                            resultTitle = 'ESFJ : 사교적인 외교관';
+                            resultExplain =
+                                '♠기본성향 : 타인을 향항 세심한 관심과 사교적인 성향으로 사람들 내에서 인기가 많으며, 타인을 돕는데 열정적인 세심형 <br> ♥연애 성향 : 기념일에 무심하고 안챙기는 애인에게 기념일 왜 모르냐고 싸우기 시작 <br> ♣투자성향 : 조심성이 많고 미래에 대한 불안 때문에 절약하는 수호자 하지만, 본인을 위한 투자에 인색';
+                            resultCeleb =
+                                'ESFJ 연예인: 리사(BLACKPINK), 오나라, 장윤정, 예진(ITZY), 박초롱, 가린, 혜리';
+                            break;
+                        case 'INFJ':
+                            resultTitle = 'INFJ : 선의의 옹호자';
+                            resultExplain =
+                                '♠기본성향 : 조용하고 신비로우며 샘솟는 영감으로 지칠 줄 모르는 이상주의자 <br> ♥연애 성향 : 애인 SNS를 살피다가 스크롤 끝까지 하면서 밤샘 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'INFJ 연예인: 정소민, 아이유, 박신혜, 성유리, 소희, 수지, 전지우';
+                            break;
+                        case 'INFP':
+                            resultTitle = 'INFP : 열정적인 중재자';
+                            resultExplain =
+                                '♠기본성향 : 상냥한 성격의 이타주의자로 건강하고 밝은 사회 건설에 앞장서는 낭만형 <br> ♥연애 성향 : 첫데이트에서 사랑해~ 라고 말함 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'INFP 연예인: 박은빈, 모모/채영(TWICE), 화사, 김지원, 김숙, 한소희, 한지민';
+                            break;
+                        case 'ENFP':
+                            resultTitle = 'ENFP : 재기발랄한 활동가';
+                            resultExplain =
+                                '♠기본성향 : 창의적이며 항상 웃을 거리를 찾아 다니는 활방한 성격으로 사람들과 자유롭게 어울리기를 좋아하는 넘치는 열정의 소유자 <br> ♥연애 성향 : 연애 시작 했는데 갑자기 연애보다 꿀잼인 일들이 생김 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'ENFP 연예인: 로제(BLACKPINK), 강민경, 이효리, 공효진, 박나래, 전소민';
+                            break;
+                        case 'ENFJ':
+                            resultTitle = 'ENFJ : 정의로운 사회 운동가';
+                            resultExplain =
+                                '♠기본성향 : 넘치는 카르스마와 영향력으로 창중을 압도하는 리더형 <br> ♥연애 성향 : 애인의 전 연인들을 궁금해하고, 완벽한 이상형이 되고 싶어함, 새벽 2시인데 남친/여친의 옛애인 SNS 몰래봄 <br> ♣투자성향 : 돈보다 중요한 가치를 믿으며 더 나은 사회를 만들고 싶은 이상주의자';
+                            resultCeleb =
+                                'ENFJ 연예인: 리아(ITZY), 신세경, 박소담, 시은(STAYC), 은서, 이성경, 김민경(개그맨)';
+                            break;
+                        case 'INTJ':
+                            resultTitle = 'INTJ : 용의주도한 전략가';
+                            resultExplain =
+                                '♠기본성향 : 상상력이 풍부하며 철두철미한 계획을 세우는 전략가형 <br> ♥연애 성향 : 첫 데이트 하는 날, 결혼하는 상상부터 자녀 계획까지 세움 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'INTJ 연예인: 류진(ITZY), 보아, 공민지, 김유정, 조유리, 손나은, 박지원(프로미스나인)';
+                            break;
+                        case 'INTP':
+                            resultTitle = 'INTP : 논리적인 사색가';
+                            resultExplain =
+                                '♠기본성향 : 끊임없이 새로운 지식에 목말라 하는 혁신가형 <br> ♥연애 성향 : 좋아하는 마음을 카톡을 통해서만 티낼 수 있음 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'INTP 연예인: 고아성, 김소연, 김신영, 소연(라붐), 초아(크레용팝), 안예은, 전혜원';
+                            break;
+                        case 'ENTP':
+                            resultTitle = 'ENTP : 뜨거운 논쟁을 즐기는 변론가';
+                            resultExplain =
+                                '♠기본성향 : 지적인 도전을 두려워하지 않는 똑똑한 호기심형 <br> ♥연애 성향 : 사실 내가 1순위라 애인보다 내 자신을 더 좋아함 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'ENTP 연예인: 라미란, 제시, 한예슬, 엠마(댄서), 김세정, 권민아, 고민시';
+                            break;
+                        case 'ENTJ':
+                            resultTitle = 'ENTJ : 대담한 통솔자';
+                            resultExplain =
+                                '♠기본성향 : 천성적으로 타고난 리더 대담하면서도 상상력이 풍부한 강한 의지의 소유자료 다양한 방법을 모색하거나 여의치 않을 경우 새로운 방안을 창출하는 리더형 <br> ♥연애 성향 : 애인 핸드폰에 뜨는 알람 하나하나를 궁금해함 <br> ♣투자성향 : 미래를 위한 투자가, 시대를 앞서가는 합리주의자로 논리적이며 미래를 위해 아낌없이 투자';
+                            resultCeleb =
+                                'ENTJ 연예인: 티파니, 문가영, 보미(걸크러쉬), 이호정, 윤하, 희진';
+                            break;
+                        default:
+                            resultTitle = '알수없음';
+                            resultExplain = '';
+                            resultCeleb = '';
+                    }
+                }
+                var title =
+                    "<div class='" +
+                    prediction[0].className +
+                    "-mbti-title'>" +
+                    resultTitle +
+                    '</div>';
+                var explain = "<div class='mbti-explain pt-2'>" + resultExplain + '</div>';
+                var celeb =
+                    "<div class='" +
+                    prediction[0].className +
+                    "-mbti-celeb pt-2 pb-2'>" +
+                    resultCeleb +
+                    '</div>';
+                $('.result-message').html(title + explain + celeb);
+                var barWidth;
+                for (let i = 0; i < maxPredictions; i++) {
+                    if (prediction[i].probability.toFixed(2) > 0.1) {
+                        barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+                    } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                        barWidth = '4%';
+                    } else {
+                        barWidth = '2%';
+                    }
+                    var labelTitle;
+                    switch (prediction[i].className) {
+                        case 'ISTJ':
+                            labelTitle = 'ISTJ';
+                            break;
+                        case 'ISTP':
+                            labelTitle = 'ISTP';
+                            break;
+                        case 'ESTP':
+                            labelTitle = 'ESTP';
+                            break;
+                        case 'ESTJ':
+                            labelTitle = 'ESTJ';
+                            break;
+                        case 'ISFJ':
+                            labelTitle = 'ISFJ';
+                            break;
+                        case 'ISFP':
+                            labelTitle = 'ISFP';
+                            break;
+                        case 'ESFP':
+                            labelTitle = 'ESFP';
+                            break;
+                        case 'ESFJ':
+                            labelTitle = 'ESFJ';
+                            break;
+                        case 'INFJ':
+                            labelTitle = 'INFJ';
+                            break;
+                        case 'INFP':
+                            labelTitle = 'INFP';
+                            break;
+                        case 'ENFP':
+                            labelTitle = 'ENFP';
+                            break;
+                        case 'ENFJ':
+                            labelTitle = 'ENFJ';
+                            break;
+                        case 'INTJ':
+                            labelTitle = 'INTJ';
+                            break;
+                        case 'INTP':
+                            labelTitle = 'INTP';
+                            break;
+                        case 'ENTP':
+                            labelTitle = 'ENTP';
+                            break;
+                        case 'ENTJ':
+                            labelTitle = 'ENTJ';
+                            break;
+                        default:
+                            labelTitle = '알수없음';
+                    }
+                    var label =
+                        "<div class='mbti-label d-flex align-items-center'>" +
+                        labelTitle +
+                        '</div>';
+                    var bar =
+                        "<div class='bar-container position-relative container'><div class='" +
+                        prediction[i].className +
+                        "-box'></div><div class='d-flex justify-content-center align-items-center " +
+                        prediction[i].className +
+                        "-bar' style='width: " +
+                        barWidth +
+                        "'><span class='d-block percent-text'>" +
+                        Math.round(prediction[i].probability.toFixed(2) * 100) +
+                        '%</span></div></div>';
+                    labelContainer.childNodes[i].innerHTML = label + bar;
+                }
+            }
+        </script>
+        <script>
+            function iosApp() {
+                document.getElementById('coupang').style.display = 'none';
+                $('#coupang ins').hide();
+                document.getElementById('addThis').style.display = 'none';
+                document.getElementById('disqus_thread').style.display = 'none';
+                var kakao = document.getElementsByClassName('kakao_ad_area');
+                for (var i = 0; i < kakao.length; i++) {
+                    if (kakao[i]) {
+                        kakao[i].style.display = 'none';
+                    }
+                }
+                document.getElementById('yotube-top-link').style.display = 'none';
+                document.getElementById('yotube-mid-link').style.display = 'none';
+                document.getElementById('yotube-bottom-link').style.display = 'none';
+            }
+        </script>
+    </body>
+    <!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+</html>
