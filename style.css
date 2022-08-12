@@ -140,6 +140,13 @@ body {
   color: #35465d;
 }
 
+.title-2 {
+  line-height: 1.67;
+  text-align: center;
+font-size: 1.5rem;
+  color: #35465d;
+}
+
 .subtitle {
   line-height: 1.53;
   text-align: center;
@@ -706,6 +713,7 @@ input:checked + label > .knob > i:before {
 .ad-banner-1 {
     width: 320px;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .ad-banner-2 {
