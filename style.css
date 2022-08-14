@@ -725,3 +725,7 @@ input:checked + label > .knob > i:before {
     width: 250px;
     margin: 0 auto;
 }
+
+.ad-banner-coupang {
+    margin: 0 auto;
+}
